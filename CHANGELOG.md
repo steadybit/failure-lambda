@@ -1,6 +1,6 @@
 # Changelog
 
-## 2024-xx-xx (next release) v0.5.0
+## 2024-08-20 v0.5.0
 
 - Updated dependencies.
 - Disable mitm in case of an exception. ([PR](https://github.com/steadybit/failure-lambda/pull/12))

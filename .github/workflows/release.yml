@@ -1,0 +1,31 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - v**
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          registry-url: 'https://registry.npmjs.org'
+      - run: git remote add test git@github.com:steadybit/cli.git
+      - run: npm ci
+      - run: npm run lint
+      - name: 'snyk monitor'
+        uses: snyk/actions/node@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          args: --prune-repeated-subdependencies
+          command: monitor
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_PUBLISH_TOKEN }}

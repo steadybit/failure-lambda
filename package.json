@@ -1,6 +1,6 @@
 {
-  "name": "failure-lambda",
-  "version": "0.4.4",
+  "name": "@steadybit/failure-lambda",
+  "version": "0.5.0",
   "description": "Module for failure injection into AWS Lambda",
   "main": "./lib/failure.js",
   "scripts": {
@@ -18,9 +18,13 @@
     "fault",
     "injection",
     "chaos",
-    "chaosengineering"
+    "chaosengineering",
+    "steadybit"
   ],
-  "author": "Steadybit",
+  "files": [
+    "lib/failure.js"
+  ],
+  "author": "Steadybit GmbH",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/steadybit/failure-lambda/issues"
