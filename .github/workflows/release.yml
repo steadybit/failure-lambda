@@ -18,7 +18,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: git remote add test git@github.com:steadybit/cli.git
       - run: npm ci
-      - run: npm run lint
+      - run: npm run verify
       - name: 'snyk monitor'
         uses: snyk/actions/node@master
         env:

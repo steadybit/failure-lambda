@@ -5,7 +5,10 @@
   "main": "./lib/failure.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint lib --ext .js,.ts"
+    "lint": "eslint lib --ext .js,.ts",
+    "prettier-check": "prettier lib --check",
+    "prettier-write": "prettier lib --write",
+    "verify": "npm run lint && npm run prettier-check"
   },
   "repository": {
     "type": "git",
