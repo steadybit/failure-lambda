@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gunnargrosch/failure-lambda.git"
+    "url": "git+https://github.com/steadybit/failure-lambda.git"
   },
   "keywords": [
     "aws",
@@ -19,12 +19,12 @@
     "chaos",
     "chaosengineering"
   ],
-  "author": "Gunnar Grosch",
+  "author": "Steadybit",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gunnargrosch/failure-lambda/issues"
+    "url": "https://github.com/steadybit/failure-lambda/issues"
   },
-  "homepage": "https://github.com/gunnargrosch/failure-lambda#readme",
+  "homepage": "https://github.com/steadybit/failure-lambda#readme",
   "devDependencies": {
     "aws-sdk": "^2.1074.0",
     "eslint": "^8.57.0",
