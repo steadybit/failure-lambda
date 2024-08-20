@@ -1,4 +1,12 @@
 # Failure injection for AWS Lambda - failure-lambda
+**[Description](#description) |**
+**[How to with SSM Parameter](#how-to-install-with-parameter-in-ssm-parameter-store) |**
+**[How to with AppConfig](#how-to-install-with-hosted-configuration-in-aws-appconfig) |**
+**[Usage](#usage) |**
+**[Examples](#examples) |**
+**[Notes](#notes) |**
+**[Changelog](CHANGELOG.md)**
+
 
 ## Description
 
@@ -73,7 +81,7 @@ Edit the values of your parameter in SSM Parameter Store or hosted configuration
 * `diskSpace` is size in MB of the file created in tmp when `failureMode` is set to `diskspace`.
 * `denylist` is an array of regular expressions, if a connection is made to a host matching one of the regular expressions it will be blocked.
 
-## Example
+## Examples
 
 In the subfolder `example` is a sample application which will install an AWS Lambda function, an Amazon DynamoDB table, and a parameter in SSM Parameter Store. You can install it using AWS SAM, AWS CDK, or Serverless Framework.
 
@@ -101,66 +109,6 @@ sls deploy
 
 ## Notes
 
+This module is a fork of Gunnar Grosch's [failure-lambda](https://github.com/gunnargrosch/failure-lambda).
+
 Inspired by Yan Cui's articles on latency injection for AWS Lambda (https://hackernoon.com/chaos-engineering-and-aws-lambda-latency-injection-ddeb4ff8d983) and Adrian Hornsby's chaos injection library for Python (https://github.com/adhorn/aws-lambda-chaos-injection/).
-
-## Changelog
-
-### 2022-02-14 v0.4.4
-
-* Switch to node-fetch@2.
-
-### 2022-02-14 v0.4.3
-
-* Updated dependencies.
-
-### 2021-03-16 v0.4.2
-
-* Puts the mitm object in the library global namespace so that it persists across function invocations.
-* Syntax formatting.
-
-### 2020-10-26 v0.4.1
-
-* Made AppConfig Lambda extension port configurable using environment variable.
-
-### 2020-10-25 v0.4.0
-
-* Added optional support for AWS AppConfig, allowing to validate failure configuration, deploy configuration using gradual or non-gradual deploy strategy, monitor deployed configuration with automatical rollback if CloudWatch Alarms is configured, and caching of configuration.
-* Hardcoded default configuration with `isEnabled: false`, to use if issues loading configuration from Parameter Store or AppConfig.
-
-### 2020-10-21 v0.3.1
-
-* Change mitm mode back to connect to fix issue with all connections being blocked.
-
-### 2020-08-24 v0.3.0
-
-* Changed mitm mode from connect to connection for quicker enable/disable of failure injection.
-* Renamed block list failure injection to denylist (breaking change for that failure mode).
-* Updated dependencies.
-
-### 2020-02-17 v0.2.0
-
-* Added block list failure.
-* Updated example application to store file in S3 and item in DynamoDB.
-
-### 2020-02-13 v0.1.1
-
-* Fixed issue with exception injection not throwing the exception.
-
-### 2019-12-30 v0.1.0
-
-* Added disk space failure.
-* Updated example application to store example file in tmp.
-
-### 2019-12-23 v0.0.1
-
-* Initial release
-
-## Contributors
-
-**Gunnar Grosch** - [GitHub](https://github.com/gunnargrosch) | [Twitter](https://twitter.com/gunnargrosch) | [LinkedIn](https://www.linkedin.com/in/gunnargrosch/)
-
-**Jason Barto** - [GitHub](https://github.com/jpbarto) | [Twitter](https://twitter.com/Jason_Barto) | [LinkedIn](https://www.linkedin.com/in/jasonbarto)
-
-## License
-
-This code is made available under the MIT-0 license. See the LICENSE file.
