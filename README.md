@@ -10,20 +10,20 @@
 
 ## Description
 
-`failure-lambda` is a small Node module for injecting failure into AWS Lambda (https://aws.amazon.com/lambda). It offers a simple failure injection wrapper for your Lambda handler where you then can choose to inject failure by setting the `failureMode` to `latency`, `exception`, `denylist`, `diskspace` or `statuscode`. You control your failure injection using SSM Parameter Store or [AWS AppConfig](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html).
+`@steadybit/failure-lambda` is a small Node module for injecting failure into AWS Lambda (https://aws.amazon.com/lambda). It offers a simple failure injection wrapper for your Lambda handler where you then can choose to inject failure by setting the `failureMode` to `latency`, `exception`, `denylist`, `diskspace` or `statuscode`. You control your failure injection using SSM Parameter Store or [AWS AppConfig](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html).
 
 ## How to install with parameter in SSM Parameter Store
 
-1. Install `failure-lambda` module using NPM.
+1. Install `@steadybit/failure-lambda` module using NPM.
 
 ```bash
-npm install failure-lambda
+npm install @steadybit/failure-lambda
 ```
 
 2. Add the module to your Lambda function code.
 
 ```js
-const failureLambda = require("failure-lambda");
+const failureLambda = require("@steadybit/failure-lambda");
 ```
 
 3. Wrap your handler.
@@ -60,16 +60,16 @@ aws ssm put-parameter --region eu-west-1 --name failureLambdaConfig --type Strin
 
 ## How to install with hosted configuration in AWS AppConfig
 
-1. Install `failure-lambda` module using NPM.
+1. Install `@steadybit/failure-lambda` module using NPM.
 
 ```bash
-npm install failure-lambda
+npm install @steadybit/failure-lambda
 ```
 
 2. Add the module to your Lambda function code.
 
 ```js
-const failureLambda = require("failure-lambda");
+const failureLambda = require("@steadybit/failure-lambda");
 ```
 
 3. Wrap your handler.
