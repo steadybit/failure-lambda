@@ -1,5 +1,9 @@
 # Changelog
 
+## 2024-08-20 v0.5.1
+
+- Republish after clarifying license.
+
 ## 2024-08-20 v0.5.0
 
 - Updated dependencies.
