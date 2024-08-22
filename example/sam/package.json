@@ -3,6 +3,6 @@
   "version": "0.1.0",
   "description": "",
   "dependencies": {
-    "failure-lambda": ""
+    "@steadybit/failure-lambda": "^0.5.1"
   }
 }
