@@ -1,5 +1,10 @@
 # Changelog
 
+## 2024-08-xx v0.6.0 (next release)
+
+- Update to AWS-SDK v3 to be able to support Node > v18
+- Node 16 is no longer supported
+
 ## 2024-08-20 v0.5.1
 
 - Republish after clarifying license.

@@ -1,6 +1,6 @@
 {
   "name": "@steadybit/failure-lambda",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "Module for failure injection into AWS Lambda",
   "main": "./lib/failure.js",
   "scripts": {
@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/steadybit/failure-lambda#readme",
   "devDependencies": {
-    "aws-sdk": "^2.1074.0",
+    "@aws-sdk/client-ssm": "^3.637.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-standard": "^17.1.0",
