@@ -6,6 +6,7 @@
   - Permission `ssm:GetParameters` is now required instead of `ssm:GetParameter`
 - Node 16 is no longer supported
 - Update dependencies (mitm in 1.7.3 with update license and support for node >= 19)
+- Fixed error handling in case of a wrong regex for the network block failure.
 
 ## 2024-08-20 v0.5.1
 
