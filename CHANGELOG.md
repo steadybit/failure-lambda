@@ -1,6 +1,6 @@
 # Changelog
 
-## 2024-08-xx v0.6.0 (next release)
+## 2024-08-26 v0.6.0
 
 - Update to AWS-SDK v3 to be able to support Node > v18
   - Permission `ssm:GetParameters` is now required instead of `ssm:GetParameter`
