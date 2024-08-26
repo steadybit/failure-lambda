@@ -3,7 +3,9 @@
 ## 2024-08-xx v0.6.0 (next release)
 
 - Update to AWS-SDK v3 to be able to support Node > v18
+  - Permission `ssm:GetParameters` is now required instead of `ssm:GetParameter`
 - Node 16 is no longer supported
+- Update dependencies (mitm in 1.7.3 with update license and support for node >= 19)
 
 ## 2024-08-20 v0.5.1
 

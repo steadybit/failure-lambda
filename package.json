@@ -45,7 +45,7 @@
     "prettier": "3.3.3"
   },
   "dependencies": {
-    "mitm": "^1.7.2",
+    "mitm": "^1.7.3",
     "node-fetch": "^2.6.7"
   }
 }
