@@ -1,1 +1,7 @@
-module.exports = { extends: ["standard", "prettier"] };
+module.exports = {
+  plugins: ["jest"],
+  extends: ["standard", "prettier"],
+  env: {
+    "jest/globals": true,
+  },
+};
