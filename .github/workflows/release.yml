@@ -19,13 +19,12 @@ jobs:
       - run: git remote add test git@github.com:steadybit/cli.git
       - run: npm ci
       - run: npm run verify
+      - name: 'set up snyk'
+        uses: steadybit/extension-kit/.github/actions/setup-snyk@main # NOSONAR githubactions:S7637 - our own action
       - name: 'snyk monitor'
-        uses: snyk/actions/node@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          args: --prune-repeated-subdependencies
-          command: monitor
+        run: snyk monitor --prune-repeated-subdependencies
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_PUBLISH_TOKEN }}
